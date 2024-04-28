@@ -1,268 +1,436 @@
 {
-"National_Parks" : 
-    [
+  "National_Parks": [
+    {
+      "name": "Grand Tetons National Park",
+      "location": "Wyoming",
+      "type": "Mountain",
+      "hikes": [
         {
-            "name" : "Grand Tetons",
-            "location" : "Wyoming",
-            "type" : "Mountain",
-            "hikes" : [
-                {
-                    "title": "Phelps Lake Overlook",
-                    "distance": "2.0 Miles",
-                    "elevation": "416ft",
-                    "difficulty": "Moderate",
-                    "image": "https://live.staticflickr.com/452/19062762752_d1cec17c8e_b.jpg",
-                    "duration": "1-2 Hours",
-                    "location":"43.65760524516181, -110.79882573862182"
-                },
-                {
-                    "title": "Jenny Lake Loop",
-                    "distance": "7.5 Miles",
-                    "elevation": "275ft",
-                    "difficulty": "Intermediate",
-                    "image": "https://live.staticflickr.com/1141/1251094223_46e7b22d0f_b.jpg",
-                    "duration": "3-5 Hours",
-                    "location":"43.75157152808946, -110.72545314685269"
-                },
-                {
-                    "title": "Hidden Falls",
-                    "distance": "1.1 Miles",
-                    "elevation": "187ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/65535/48915972552_dd264a14d3_b.jpg",
-                    "duration": "30 mins",
-                    "location":"43.765631268670795, -110.75076923273615"
-                },
-                {
-                    "title": "Cascade Canyon",
-                    "distance": "10.0 Miles",
-                    "elevation": "6738ft",
-                    "difficulty": "Strenuous",
-                    "image": "https://cdn2.picryl.com/photo/2010/01/01/north-fork-cascade-canyon-de9a3e-1024.jpg",
-                    "duration": "4-6 Hours",
-                    "location":"43.764344672449724, -110.7909771538148"
-                },
-                {
-                    "title": "Lakeshore Trail",
-                    "distance": "2.5 Miles",
-                    "elevation": "85ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/7398/27455716632_43fa06d020_b.jpg",
-                    "duration": "1 Hour",
-                    "location":"43.90895389589937, -110.64674235495954"
-                },
-                {
-                    "title": "Marion Lake Loop",
-                    "distance": "5.1 Miles",
-                    "elevation": "1200ft",
-                    "difficulty": "Strenuous ",
-                    "image": "https://i2.pickpik.com/photos/732/59/764/string-lake-reflection-mount-moran-landscape-preview.jpg",
-                    "duration": "2-3 Hours",
-                    "location":"43.62306003413516, -110.92889918917874"
-                },
-                {
-                    "title": "Moose Ponds",
-                    "distance": "2.7 Miles",
-                    "elevation": "195ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/6012/5928123836_74a6607f21_b.jpg",
-                    "duration": "1 Hour",
-                    "location":"43.75033522877881, -110.74246001986276"
-                },
-                {
-                    "title": "Static Peak Divide",
-                    "distance": "16.2 Miles",
-                    "elevation": "5000ft",
-                    "difficulty": "Master",
-                    "image": "https://live.staticflickr.com/4358/36973819900_293cf3b246_b.jpg",
-                    "duration": "+10 Hours",
-                    "location":"43.6877946448531, -110.82966445030056"
-                },
-                {
-                    "title": "Taggert-Bradley Lake Loop",
-                    "distance": "5.5 Miles",
-                    "elevation": "585ft",
-                    "difficulty": "Moderate",
-                    "image": "https://live.staticflickr.com/65535/53233159394_efceb539f5_b.jpg",
-                    "duration": "2-3 Hours",
-                    "location":"43.69358733793245, -110.73299958646702"
-                },
-                {
-                    "title": "Schwabacher Landing Trail",
-                    "distance": "1.3 Miles",
-                    "elevation": "10ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/4315/36115576525_86a6f2bccc_b.jpg",
-                    "duration": "30 Mins",
-                    "location":"43.71317080440761, -110.6714730026668"
-                },
-                {
-                    "title": "Woodland and Lake Creek Trail",
-                    "distance": "3.4 Miles",
-                    "elevation": "260ft",
-                    "difficulty": "Novice",
-                    "image": "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvd3l2bDA2NTEuanBn.jpg",
-                    "duration": "1-2 Hours",
-                    "location":"43.62715798500877, -110.77767589037025"
-                }
-            ] 
+          "title": "Phelps Lake Overlook",
+          "distance": "2.0 Miles",
+          "elevation": "416ft",
+          "difficulty": "Moderate",
+          "image": "https://live.staticflickr.com/452/19062762752_d1cec17c8e_b.jpg",
+          "duration": "1-2 Hours",
+          "location": "43.65760524516181, -110.79882573862182",
+          "rating": 4.7
         },
         {
-            "name" : "Zion",
-            "location" : "Utah",
-            "type" : "Desert",
-            "hikes" : [
-            ]
+          "title": "Jenny Lake Loop",
+          "distance": "7.5 Miles",
+          "elevation": "275ft",
+          "difficulty": "Intermediate",
+          "image": "https://live.staticflickr.com/1141/1251094223_46e7b22d0f_b.jpg",
+          "duration": "3-5 Hours",
+          "location": "43.75157152808946, -110.72545314685269",
+          "rating": 4.9
         },
         {
-            "name" : "Yosemite",
-            "location" : "California",
-            "type" : "Mountain",
-            "hikes" : [
-            ]
+          "title": "Hidden Falls",
+          "distance": "1.1 Miles",
+          "elevation": "187ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/65535/48915972552_dd264a14d3_b.jpg",
+          "duration": "30 mins",
+          "location": "43.765631268670795, -110.75076923273615",
+          "rating": 4.9
         },
         {
-            "name" : "Yellowstone",
-            "location" : "Wyoming",
-            "type" : "Forest",
-            "hikes" : [
-            ]
+          "title": "Cascade Canyon",
+          "distance": "10.0 Miles",
+          "elevation": "6738ft",
+          "difficulty": "Strenuous",
+          "image": "https://cdn2.picryl.com/photo/2010/01/01/north-fork-cascade-canyon-de9a3e-1024.jpg",
+          "duration": "4-6 Hours",
+          "location": "43.764344672449724, -110.7909771538148",
+          "rating": 4.4
         },
         {
-            "name" : "Badlands National Park",
-            "location" : "South Dakota",
-            "type" : "Prairie",
-            "hikes" : [
-                {
-                    "title": "Notch Trail",
-                    "distance": "1.5 Miles",
-                    "elevation": "127ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/5823/22789056806_1bf0fb4c87_b.jpg",
-                    "duration": "1 Hours",
-                    "location":"43.75677760549937, -101.92945788959665",
-                    "rating":4.7
-                },
-                {
-                    "title": "The Door Trail",
-                    "distance": "0.9 Miles",
-                    "elevation": "22ft",
-                    "difficulty": "Novice",
-                    "image":"https://upload.wikimedia.org/wikipedia/commons/7/76/Door_Trail_PA110405_%27Chadron_Formation%27_is_the_surface_%2834-37_MYA%29_Eocene.JPG",
-                    "duration": "30 mins",
-                    "location":"43.763581816198126, -101.92662414541442",
-                    "rating":4.6
-                },
-                {
-                    "title": "The Window Trail",
-                    "distance": "0.3 Miles",
-                    "elevation": "13ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/5301/5768262567_2b054b2153_c.jpg",
-                    "duration": "10 mins",
-                    "location":"29.275798572325737, -103.31617800374512",
-                    "rating":4.3
-                },
-                {
-                    "title": "Castle Trail",
-                    "distance": "10.3 Miles",
-                    "elevation": "305ft",
-                    "difficulty": "Moderate",
-                    "image":"https://live.staticflickr.com/5538/30254333546_34c0c01791_b.jpg",
-                    "duration": "6 Hours",
-                    "location":"43.77403483204455, -102.00158523727349",
-                    "rating":4.4
-                },
-                {
-                    "title": "Cliff Shelf Nature Trail",
-                    "distance": "0.5",
-                    "elevation": "65ft",
-                    "difficulty": "Novice",
-                    "image":"https://live.staticflickr.com/65535/49906011497_394987cc81_b.jpg",
-                    "duration": "20 mins",
-                    "location":"43.75058194742346, -101.93078248822486",
-                    "rating":4.4
-                },
-                {
-                    "title": "Big Badlands Overlook",
-                    "distance": "0.2 Miles",
-                    "elevation": "3ft",
-                    "difficulty": "Master",
-                    "image": "https://live.staticflickr.com/4135/4755459947_05e0c393aa_b.jpg",
-                    "duration": "5 mins",
-                    "location":"43.727990364005855, -101.98404247949809",
-                    "rating":4.4
-                }
-                
-            ]
+          "title": "Lakeshore Trail",
+          "distance": "2.5 Miles",
+          "elevation": "85ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/7398/27455716632_43fa06d020_b.jpg",
+          "duration": "1 Hour",
+          "location": "43.90895389589937, -110.64674235495954",
+          "rating": 4.2
         },
         {
-            "name" : "Joshua Tree National Park",
-            "location" : "California",
-            "type" : "Desert",
-            "hikes" : [
-                {
-                    "title": "Ryan Mountain",
-                    "distance": "2.9 Miles",
-                    "elevation": "1062ft",
-                    "difficulty": "Moderate",
-                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtQJ8JQLbeK9YvQSCLFt23MlCbOOmHU0IPw&s",
-                    "duration": "1-2 Hours",
-                    "location":"33.986645090290004, -116.13516565760445",
-                    "rating":4.7
-                },
-                {
-                    "title": "Barker Dam",
-                    "distance": "1.3 Miles",
-                    "elevation": "59ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/4618/39677605625_c01d34eee2_b.jpg",
-                    "duration": "30 mins",
-                    "location":"34.030955252371676, -116.14621470169956",
-                    "rating":4.7
-                },
-                {
-                    "title": "Lost Palms Oasis",
-                    "distance": "7.4 Miles",
-                    "elevation": "1046ft",
-                    "difficulty": "Intermediate",
-                    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Joshua_Tree_National_Park_-_49_Palms_Oasis_-_1a.jpg",
-                    "duration": "4 Hours",
-                    "location":"33.72436200385298, -115.78682722883639",
-                    "rating":4.7
-                },
-                {
-                    "title": "Hidden Valley",
-                    "distance": "1.0 Miles",
-                    "elevation": "118ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/4679/38975668172_772e9d10d6_b.jpg",
-                    "duration": "30 mins",
-                    "location":"34.022970342244285, -116.1817583624665",
-                    "rating":4.8
-                },
-                {
-                    "title": "Arch Rock Trail",
-                    "distance": "1.2 Miles",
-                    "elevation": "88ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/65535/50633767948_b2364a7b65_b.jpg",
-                    "duration": "30 mins",
-                    "location":"33.98961090014271, -116.0229731323924",
-                    "rating":4.6
-                },
-                {
-                    "title": "Skull Rock",
-                    "distance": "1.7 Miles",
-                    "elevation": "147ft",
-                    "difficulty": "Novice",
-                    "image": "https://live.staticflickr.com/1666/25973605191_0f4cf61388_b.jpg",
-                    "duration": "1 Hour",
-                    "location":"33.9980338799786, -116.0598338612284",
-                    "rating":4.5
-                }
-                
-            ]
+          "title": "Marion Lake Loop",
+          "distance": "5.1 Miles",
+          "elevation": "1200ft",
+          "difficulty": "Strenuous",
+          "image": "https://i2.pickpik.com/photos/732/59/764/string-lake-reflection-mount-moran-landscape-preview.jpg",
+          "duration": "2-3 Hours",
+          "location": "43.62306003413516, -110.92889918917874",
+          "rating": 4.6
+        },
+        {
+          "title": "Static Peak Divide",
+          "distance": "16.2 Miles",
+          "elevation": "5000ft",
+          "difficulty": "Master",
+          "image": "https://live.staticflickr.com/4358/36973819900_293cf3b246_b.jpg",
+          "duration": "+10 Hours",
+          "location": "43.6877946448531, -110.82966445030056",
+          "rating": 4.4
+        },
+        {
+          "title": "Taggert-Bradley Lake Loop",
+          "distance": "5.5 Miles",
+          "elevation": "585ft",
+          "difficulty": "Moderate",
+          "image": "https://live.staticflickr.com/65535/53233159394_efceb539f5_b.jpg",
+          "duration": "2-3 Hours",
+          "location": "43.69358733793245, -110.73299958646702",
+          "rating": 4.5
+        },
+        {
+          "title": "Schwabacher Landing Trail",
+          "distance": "1.3 Miles",
+          "elevation": "10ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/4315/36115576525_86a6f2bccc_b.jpg",
+          "duration": "30 Mins",
+          "location": "43.71317080440761, -110.6714730026668",
+          "rating": 4.1
         }
-    ]
+      ]
+    },
+    {
+      "name": "Zion National Park",
+      "location": "Utah",
+      "type": "Desert",
+      "hikes": [
+        {
+          "title": "Angel's Landing Trail",
+          "distance": "4.3 Miles",
+          "elevation": "1,827ft",
+          "difficulty": "Strenuous",
+          "image": "https://live.staticflickr.com/4276/34201676563_d29183913d_b.jpg",
+          "duration": "4 Hours",
+          "location": "37.27029388143708, -112.9470707849041",
+          "rating": 4.9
+        },
+        {
+          "title": "The Watchman Trail",
+          "distance": "3.1 Miles",
+          "elevation": "636ft",
+          "difficulty": "Moderate",
+          "image": "https://live.staticflickr.com/8361/8424606037_c01314c257_b.jpg",
+          "duration": "1-2 Hours",
+          "location": "37.200263761421226, -112.97864914772778",
+          "rating": 3.3
+        },
+        {
+          "title": "Emerald Pools Trail",
+          "distance": "3.0 Miles",
+          "elevation": "620ft",
+          "difficulty": "Moderate",
+          "image": "https://live.staticflickr.com/3249/3125563841_515bce887a_b.jpg",
+          "duration": "1-2 Hours",
+          "location": "37.25015914074546, -112.95911642372366",
+          "rating": 4.8
+        },
+        {
+          "title": "Zion Canyon Overlook",
+          "distance": "0.9 Miles",
+          "elevation": "157ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/8170/8011900709_50767fb5e0_b.jpg",
+          "duration": "30 mins",
+          "location": "37.21382357423559, -112.94331447471228",
+          "rating": 5.0
+        },
+        {
+          "title": "The Narrows",
+          "distance": "8.9 Miles",
+          "elevation": "695ft",
+          "difficulty": "Strenuous",
+          "image": "https://live.staticflickr.com/65535/52209686653_3944ea6ecc_b.jpg",
+          "duration": "6 Hours",
+          "location": "37.30655388940401, -112.94950127022145",
+          "rating": 4.7
+        },
+        {
+          "title": "Scout Lookout",
+          "distance": "3.6 Miles",
+          "elevation": "1115ft",
+          "difficulty": "Strenuous",
+          "image": "https://lookoutpoint.ca/s/photos/photo/rz/1200/EAw4jrUdFz9Z7x5QH7ms-tIfXOo/HIjUPSUPBgA.jpg",
+          "duration": "2 Hours",
+          "location": "37.2747911287083, -112.95053031703776",
+          "rating": 4.8
+        }
+      ]
+    },
+    {
+      "name": "Yosemite National Park",
+      "location": "California",
+      "type": "Mountain",
+      "hikes": [
+        {
+          "title": "Vernal and Nevada Falls",
+          "distance": "6.4 Miles",
+          "elevation": "2200ft",
+          "difficulty": "Strenuous",
+          "image": "https://live.staticflickr.com/4046/4676852881_a6f605100d_b.jpg",
+          "duration": "4 Hours",
+          "location": "37.72645411698255, -119.53956785572016",
+          "rating": 4.8
+        },
+        {
+          "title": "Half Dome via John Muir Trail",
+          "distance": "16.5 Miles",
+          "elevation": "5300ft",
+          "difficulty": "Master",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Half_Dome_from_Glacier_Point%2C_Yosemite_NP_-_Diliff.jpg",
+          "duration": "10-12 Hours",
+          "location": "37.74791902103836, -119.53302776072667",
+          "rating": 4.9
+        },
+        {
+          "title": "Lower Yosemite Falls",
+          "distance": "1.2 Miles",
+          "elevation": "50ft",
+          "difficulty": "Novice",
+          "image": "https://miro.medium.com/v2/resize:fit:1400/1*Av2J_lDdPxaAYCDRC4NhLA.jpeg",
+          "duration": "30 mins",
+          "location": "37.75289524332792, -119.59658953002312",
+          "rating": 4.6
+        },
+        {
+          "title": "Upper Yosemite Falls",
+          "distance": "6.6 Miles",
+          "elevation": "3250ft",
+          "difficulty": "Strenuous",
+          "image": "https://live.staticflickr.com/444/20029402292_99c6df1a3f_b.jpg",
+          "duration": "5-6 Hours",
+          "location": "37.75827056533916, -119.59734077549925",
+          "rating": 4.7
+        },
+        {
+          "title": "Mirror Lake Loop",
+          "distance": "4.6 Miles",
+          "elevation": "300ft",
+          "difficulty": "Moderate",
+          "image": "https://cdn12.picryl.com/photo/2016/12/31/mirror-lake-yosemite-national-park-nature-landscapes-65d76a-1024.jpg",
+          "duration": "1-2 Hours",
+          "location": "37.74807734953812, -119.54971319528183",
+          "rating": 4.5
+        },
+        {
+          "title": "Columbia Rock Trail",
+          "distance": "2.2 Miles",
+          "elevation": "1000ft",
+          "difficulty": "Moderate",
+          "image": "https://live.staticflickr.com/5110/5651027797_e0623475c9_b.jpg",
+          "duration": "1-2 Hours",
+          "location": "37.74670726722911, -119.60278681886653",
+          "rating": 4.3
+        }
+      ]
+    },
+    {
+      "name": "Yellowstone National Park",
+      "location": "Wyoming",
+      "type": "Forest",
+      "hikes": [
+        {
+          "title": "Grand Prismatic Hot Spring Overlook",
+          "distance": "1.5 Miles",
+          "elevation": "200ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/842/41435293880_54c3b96c00_b.jpg",
+          "duration": "1 Hour",
+          "location": "44.52368592548822, -110.83986804551071",
+          "rating": 4.5
+        },
+        {
+          "title": "Upper Geyser Basin and Old Faithful Observation Point Loop",
+          "distance": "4.9 Miles",
+          "elevation": "360ft",
+          "difficulty": "Moderate",
+          "image": "https://cdn2.picryl.com/photo/2013/01/01/visitors-watching-old-faithful-geyser-with-ofi-and-ofvec-in-background-c54590-1024.jpg",
+          "duration": "1-2 Hours",
+          "location": "44.46065106529636, -110.8281162455141",
+          "rating": 4.9
+        },
+        {
+          "title": "Mammoth Terraces",
+          "distance": "2.5 Miles",
+          "elevation": "380ft",
+          "difficulty": "Novice",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Dead_trees_at_Mammoth_Hot_Springs.jpg",
+          "duration": "1 Hour",
+          "location": "44.96670654590148, -110.71116415871329",
+          "rating": 4.3
+        },
+        {
+          "title": "Mud Volcano",
+          "distance": "0.8 Miles",
+          "elevation": "120ft",
+          "difficulty": "Novice",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Mud_Volcano%2C_Yellowstone_National_Park_%287712518928%29.jpg",
+          "duration": "1 Hour",
+          "location": "44.63037930209231, -110.43173396051485",
+          "rating": 4.6
+        },
+        {
+          "title": "Beaver Ponds Trail Loop",
+          "distance": "5.5 Miles",
+          "elevation": "760ft",
+          "difficulty": "Moderate",
+          "image": "https://cdn2.picryl.com/photo/2012/01/01/beaver-pond-261320-1024.jpg",
+          "duration": "2-3 Hours",
+          "location": "44.98675989012068, -110.71361469512397",
+          "rating": 4.4
+        },
+        {
+          "title": "Dunraven Pass to Mount Washburn",
+          "distance": "6.8 Miles",
+          "elevation": "1400ft",
+          "difficulty": "Strenuous",
+          "image": "https://cdn2.picryl.com/photo/2023/08/24/mt-washburn-trail-dunraven-pass-2d6ea29c-beca-48d9-a014-16e5288235c0-51234f-640.jpg",
+          "duration": "3-4 Hours",
+          "location": "44.80014273558659, -110.43421644197645",
+          "rating": 4.8
+        }
+      ]
+    },
+    {
+      "name": "Badlands National Park",
+      "location": "South Dakota",
+      "type": "Prairie",
+      "hikes": [
+        {
+          "title": "Notch Trail",
+          "distance": "1.5 Miles",
+          "elevation": "127ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/5823/22789056806_1bf0fb4c87_b.jpg",
+          "duration": "1 Hours",
+          "location": "43.75677760549937, -101.92945788959665",
+          "rating": 4.7
+        },
+        {
+          "title": "The Door Trail",
+          "distance": "0.9 Miles",
+          "elevation": "22ft",
+          "difficulty": "Novice",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Door_Trail_PA110405_%27Chadron_Formation%27_is_the_surface_%2834-37_MYA%29_Eocene.JPG",
+          "duration": "30 mins",
+          "location": "43.763581816198126, -101.92662414541442",
+          "rating": 4.6
+        },
+        {
+          "title": "The Window Trail",
+          "distance": "0.3 Miles",
+          "elevation": "13ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/5301/5768262567_2b054b2153_c.jpg",
+          "duration": "10 mins",
+          "location": "29.275798572325737, -103.31617800374512",
+          "rating": 4.3
+        },
+        {
+          "title": "Castle Trail",
+          "distance": "10.3 Miles",
+          "elevation": "305ft",
+          "difficulty": "Moderate",
+          "image": "https://live.staticflickr.com/5538/30254333546_34c0c01791_b.jpg",
+          "duration": "6 Hours",
+          "location": "43.77403483204455, -102.00158523727349",
+          "rating": 4.4
+        },
+        {
+          "title": "Cliff Shelf Nature Trail",
+          "distance": "0.5",
+          "elevation": "65ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/65535/49906011497_394987cc81_b.jpg",
+          "duration": "20 mins",
+          "location": "43.75058194742346, -101.93078248822486",
+          "rating": 4.4
+        },
+        {
+          "title": "Big Badlands Overlook",
+          "distance": "0.2 Miles",
+          "elevation": "3ft",
+          "difficulty": "Master",
+          "image": "https://live.staticflickr.com/4135/4755459947_05e0c393aa_b.jpg",
+          "duration": "5 mins",
+          "location": "43.727990364005855, -101.98404247949809",
+          "rating": 4.4
+        }
+      ]
+    },
+    {
+      "name": "Joshua Tree National Park",
+      "location": "California",
+      "type": "Desert",
+      "hikes": [
+        {
+          "title": "Ryan Mountain",
+          "distance": "2.9 Miles",
+          "elevation": "1062ft",
+          "difficulty": "Moderate",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtQJ8JQLbeK9YvQSCLFt23MlCbOOmHU0IPw&s",
+          "duration": "1-2 Hours",
+          "location": "33.986645090290004, -116.13516565760445",
+          "rating": 4.7
+        },
+        {
+          "title": "Barker Dam",
+          "distance": "1.3 Miles",
+          "elevation": "59ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/4618/39677605625_c01d34eee2_b.jpg",
+          "duration": "30 mins",
+          "location": "34.030955252371676, -116.14621470169956",
+          "rating": 4.7
+        },
+        {
+          "title": "Lost Palms Oasis",
+          "distance": "7.4 Miles",
+          "elevation": "1046ft",
+          "difficulty": "Intermediate",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Joshua_Tree_National_Park_-_49_Palms_Oasis_-_1a.jpg",
+          "duration": "4 Hours",
+          "location": "33.72436200385298, -115.78682722883639",
+          "rating": 4.7
+        },
+        {
+          "title": "Hidden Valley",
+          "distance": "1.0 Miles",
+          "elevation": "118ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/4679/38975668172_772e9d10d6_b.jpg",
+          "duration": "30 mins",
+          "location": "34.022970342244285, -116.1817583624665",
+          "rating": 4.8
+        },
+        {
+          "title": "Arch Rock Trail",
+          "distance": "1.2 Miles",
+          "elevation": "88ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/65535/50633767948_b2364a7b65_b.jpg",
+          "duration": "30 mins",
+          "location": "33.98961090014271, -116.0229731323924",
+          "rating": 4.6
+        },
+        {
+          "title": "Skull Rock",
+          "distance": "1.7 Miles",
+          "elevation": "147ft",
+          "difficulty": "Novice",
+          "image": "https://live.staticflickr.com/1666/25973605191_0f4cf61388_b.jpg",
+          "duration": "1 Hour",
+          "location": "33.9980338799786, -116.0598338612284",
+          "rating": 4.5
+        }
+      ]
+    }
+  ]
 }
