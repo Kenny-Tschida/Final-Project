@@ -1,0 +1,146 @@
+{
+"National_Parks" : 
+    [
+        {
+            "name" : "Grand Tetons",
+            "location" : "Wyoming",
+            "type" : "Mountain",
+            "hikes" : [
+                {
+                    "title": "Phelps Lake Overlook",
+                    "distance": "2.0 Miles",
+                    "elevation": "416ft",
+                    "difficulty": "Moderate",
+                    "image": "https://live.staticflickr.com/452/19062762752_d1cec17c8e_b.jpg",
+                    "duration": "1-2 Hours",
+                    "location":"43.65760524516181, -110.79882573862182"
+                },
+                {
+                    "title": "Jenny Lake Loop",
+                    "distance": "7.5 Miles",
+                    "elevation": "275ft",
+                    "difficulty": "Intermediate",
+                    "image": "https://live.staticflickr.com/1141/1251094223_46e7b22d0f_b.jpg",
+                    "duration": "3-5 Hours",
+                    "location":"43.75157152808946, -110.72545314685269"
+                },
+                {
+                    "title": "Hidden Falls",
+                    "distance": "1.1 Miles",
+                    "elevation": "187ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/65535/48915972552_dd264a14d3_b.jpg",
+                    "duration": "30 mins",
+                    "location":"43.765631268670795, -110.75076923273615"
+                },
+                {
+                    "title": "Cascade Canyon",
+                    "distance": "10.0 Miles",
+                    "elevation": "6738ft",
+                    "difficulty": "Strenuous",
+                    "image": "https://cdn2.picryl.com/photo/2010/01/01/north-fork-cascade-canyon-de9a3e-1024.jpg",
+                    "duration": "4-6 Hours",
+                    "location":"43.764344672449724, -110.7909771538148"
+                },
+                {
+                    "title": "Lakeshore Trail",
+                    "distance": "2.5 Miles",
+                    "elevation": "85ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/7398/27455716632_43fa06d020_b.jpg",
+                    "duration": "1 Hour",
+                    "location":"43.90895389589937, -110.64674235495954"
+                },
+                {
+                    "title": "Marion Lake Loop",
+                    "distance": "5.1 Miles",
+                    "elevation": "1200ft",
+                    "difficulty": "Strenuous ",
+                    "image": "https://i2.pickpik.com/photos/732/59/764/string-lake-reflection-mount-moran-landscape-preview.jpg",
+                    "duration": "2-3 Hours",
+                    "location":"43.62306003413516, -110.92889918917874"
+                },
+                {
+                    "title": "Moose Ponds",
+                    "distance": "2.7 Miles",
+                    "elevation": "195ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/6012/5928123836_74a6607f21_b.jpg",
+                    "duration": "1 Hour",
+                    "location":"43.75033522877881, -110.74246001986276"
+                },
+                {
+                    "title": "Static Peak Divide",
+                    "distance": "16.2 Miles",
+                    "elevation": "5000ft",
+                    "difficulty": "Master",
+                    "image": "https://live.staticflickr.com/4358/36973819900_293cf3b246_b.jpg",
+                    "duration": "+10 Hours",
+                    "location":"43.6877946448531, -110.82966445030056"
+                },
+                {
+                    "title": "Taggert-Bradley Lake Loop",
+                    "distance": "5.5 Miles",
+                    "elevation": "585ft",
+                    "difficulty": "Moderate",
+                    "image": "https://live.staticflickr.com/65535/53233159394_efceb539f5_b.jpg",
+                    "duration": "2-3 Hours",
+                    "location":"43.69358733793245, -110.73299958646702"
+                },
+                {
+                    "title": "Schwabacher Landing Trail",
+                    "distance": "1.3 Miles",
+                    "elevation": "10ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/4315/36115576525_86a6f2bccc_b.jpg",
+                    "duration": "30 Mins",
+                    "location":"43.71317080440761, -110.6714730026668"
+                },
+                {
+                    "title": "Woodland and Lake Creek Trail",
+                    "distance": "3.4 Miles",
+                    "elevation": "260ft",
+                    "difficulty": "Novice",
+                    "image": "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvd3l2bDA2NTEuanBn.jpg",
+                    "duration": "1-2 Hours",
+                    "location":"43.62715798500877, -110.77767589037025"
+                }
+            ] 
+        },
+        {
+            "name" : "Zion",
+            "location" : "Utah",
+            "type" : "Desert",
+            "hikes" : [
+            ]
+        },
+        {
+            "name" : "Yosemite",
+            "location" : "California",
+            "type" : "Mountain",
+            "hikes" : [
+            ]
+        },
+        {
+            "name" : "Yellowstone",
+            "location" : "Wyoming",
+            "type" : "Forest",
+            "hikes" : [
+            ]
+        },
+        {
+            "name" : "Badlands",
+            "location" : "South Dakota",
+            "type" : "Prairie",
+            "hikes" : [
+            ]
+        },
+        {
+            "name" : "Joshua Tree",
+            "location" : "California",
+            "type" : "Desert",
+            "hikes" : [
+            ]
+        }
+    ]
+}
