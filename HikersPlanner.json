@@ -129,17 +129,139 @@
             ]
         },
         {
-            "name" : "Badlands",
+            "name" : "Badlands National Park",
             "location" : "South Dakota",
             "type" : "Prairie",
             "hikes" : [
+                {
+                    "title": "Notch Trail",
+                    "distance": "1.5 Miles",
+                    "elevation": "127ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/5823/22789056806_1bf0fb4c87_b.jpg",
+                    "duration": "1 Hours",
+                    "location":"43.75677760549937, -101.92945788959665",
+                    "rating":4.7
+                },
+                {
+                    "title": "The Door Trail",
+                    "distance": "0.9 Miles",
+                    "elevation": "22ft",
+                    "difficulty": "Novice",
+                    "image":"https://upload.wikimedia.org/wikipedia/commons/7/76/Door_Trail_PA110405_%27Chadron_Formation%27_is_the_surface_%2834-37_MYA%29_Eocene.JPG",
+                    "duration": "30 mins",
+                    "location":"43.763581816198126, -101.92662414541442",
+                    "rating":4.6
+                },
+                {
+                    "title": "The Window Trail",
+                    "distance": "0.3 Miles",
+                    "elevation": "13ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/5301/5768262567_2b054b2153_c.jpg",
+                    "duration": "10 mins",
+                    "location":"29.275798572325737, -103.31617800374512",
+                    "rating":4.3
+                },
+                {
+                    "title": "Castle Trail",
+                    "distance": "10.3 Miles",
+                    "elevation": "305ft",
+                    "difficulty": "Moderate",
+                    "image":"https://live.staticflickr.com/5538/30254333546_34c0c01791_b.jpg",
+                    "duration": "6 Hours",
+                    "location":"43.77403483204455, -102.00158523727349",
+                    "rating":4.4
+                },
+                {
+                    "title": "Cliff Shelf Nature Trail",
+                    "distance": "0.5",
+                    "elevation": "65ft",
+                    "difficulty": "Novice",
+                    "image":"https://live.staticflickr.com/65535/49906011497_394987cc81_b.jpg",
+                    "duration": "20 mins",
+                    "location":"43.75058194742346, -101.93078248822486",
+                    "rating":4.4
+                },
+                {
+                    "title": "Big Badlands Overlook",
+                    "distance": "0.2 Miles",
+                    "elevation": "3ft",
+                    "difficulty": "Master",
+                    "image": "https://live.staticflickr.com/4135/4755459947_05e0c393aa_b.jpg",
+                    "duration": "5 mins",
+                    "location":"43.727990364005855, -101.98404247949809",
+                    "rating":4.4
+                }
+                
             ]
         },
         {
-            "name" : "Joshua Tree",
+            "name" : "Joshua Tree National Park",
             "location" : "California",
             "type" : "Desert",
             "hikes" : [
+                {
+                    "title": "Ryan Mountain",
+                    "distance": "2.9 Miles",
+                    "elevation": "1062ft",
+                    "difficulty": "Moderate",
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtQJ8JQLbeK9YvQSCLFt23MlCbOOmHU0IPw&s",
+                    "duration": "1-2 Hours",
+                    "location":"33.986645090290004, -116.13516565760445",
+                    "rating":4.7
+                },
+                {
+                    "title": "Barker Dam",
+                    "distance": "1.3 Miles",
+                    "elevation": "59ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/4618/39677605625_c01d34eee2_b.jpg",
+                    "duration": "30 mins",
+                    "location":"34.030955252371676, -116.14621470169956",
+                    "rating":4.7
+                },
+                {
+                    "title": "Lost Palms Oasis",
+                    "distance": "7.4 Miles",
+                    "elevation": "1046ft",
+                    "difficulty": "Intermediate",
+                    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Joshua_Tree_National_Park_-_49_Palms_Oasis_-_1a.jpg",
+                    "duration": "4 Hours",
+                    "location":"33.72436200385298, -115.78682722883639",
+                    "rating":4.7
+                },
+                {
+                    "title": "Hidden Valley",
+                    "distance": "1.0 Miles",
+                    "elevation": "118ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/4679/38975668172_772e9d10d6_b.jpg",
+                    "duration": "30 mins",
+                    "location":"34.022970342244285, -116.1817583624665",
+                    "rating":4.8
+                },
+                {
+                    "title": "Arch Rock Trail",
+                    "distance": "1.2 Miles",
+                    "elevation": "88ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/65535/50633767948_b2364a7b65_b.jpg",
+                    "duration": "30 mins",
+                    "location":"33.98961090014271, -116.0229731323924",
+                    "rating":4.6
+                },
+                {
+                    "title": "Skull Rock",
+                    "distance": "1.7 Miles",
+                    "elevation": "147ft",
+                    "difficulty": "Novice",
+                    "image": "https://live.staticflickr.com/1666/25973605191_0f4cf61388_b.jpg",
+                    "duration": "1 Hour",
+                    "location":"33.9980338799786, -116.0598338612284",
+                    "rating":4.5
+                }
+                
             ]
         }
     ]
