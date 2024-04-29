@@ -27,6 +27,32 @@ function App() {
       });
   }
 
+  function viewGrandTetons() {
+    setView("Grand Tetons National Park")
+  }
+  function viewZion() {
+    setView("Zion National Park")
+  }
+  function viewYosemite() {
+    setView("Yosemite National Park")
+  }
+  function viewYellowstone() {
+    setView("Yellowstone National Park")
+  }
+  function viewBadlands() {
+    setView("Badlands National Park")
+  }
+  function viewJoshuaTree() {
+    setView("Joshua Tree National Park")
+  }
+  function viewPlanner() {
+    setView("Planner")
+  }
+
+  function viewInfo() {
+    setView("Info")
+  }
+
   const viewAllParks =
     park &&
     park.map((el) => (
@@ -66,6 +92,12 @@ function App() {
             <button class="btn btn-primary" onClick={viewHome}>
               Home
             </button>
+            <button class="btn btn-primary" onClick={viewPlanner}>
+              Planner
+            </button>
+            <button class="btn btn-primary" onClick={viewInfo}>
+              About
+            </button>
           </div>
         </div>
       </header>
@@ -77,7 +109,7 @@ function App() {
             </div>
           </div>
         )}{" "}
-        {view === "Grand Teton National Park" && <div></div>}{" "}
+        {view === "Grand Tetons National Park" && <div></div>}{" "}
         {view === "Zion National Park" && <div></div>}{" "}
         {view === "Yosemite National Park" && <div></div>}{" "}
         {view === "Yellowstone National Park" && <div></div>}{" "}
