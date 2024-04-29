@@ -5,22 +5,28 @@ function App() {
   const [park, setPark] = useState([]);
 
   useEffect(() => {
-    viewHome();
-  }, []);
-
+    console.log("Updated park state:", park);
+  }, [park]); // This will log the updated value of park whenever it changes
+  
+  useEffect(() => {
+    viewHome(); // Fetch park data on component mount
+  }, []); // Empty dependency array ensures this effect runs only once on mount
+  
+  
   function viewHome() {
     fetch("http://localhost:8081/listParks")
       .then((response) => response.json())
       .then((data) => {
         console.log("Fetched data:", data);
-        setPark(data.National_Parks);
-        console.log("Updated park state:", park);
+        const nationalParks = data[0].National_Parks;
+        setPark(nationalParks);
+        console.log("Updated park state:", nationalParks);
         setView("Home");
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }
+  }  
 
   const viewAllParks =
     park &&
@@ -30,9 +36,9 @@ function App() {
           <img
             src={el.image}
             id="catalog_image"
-            className="mx-3 mt-3"
-            width="35%"
-            height="35%"
+            className="card-img-top"
+            width="900"
+            height="500"
             alt="image"
           />
           <div className="card-body">
@@ -62,7 +68,7 @@ function App() {
       <div class="px-5 py-3">
         {view === "Home" && (
           <div>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div className="row row-cols-1 row-cols-sm-2 g-2">
               {park && park.length > 0 && viewAllParks}
             </div>
           </div>
