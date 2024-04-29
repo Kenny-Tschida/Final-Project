@@ -27,24 +27,33 @@ function App() {
       });
   }
 
-  function viewGrandTetons() {
-    setView("Grand Tetons National Park")
+  function handleParkView(parkName) {
+    // Set the view based on the park name
+    switch (parkName) {
+      case "Grand Tetons National Park":
+        setView("Grand Tetons National Park");
+        break;
+      case "Zion National Park":
+        setView("Zion National Park");
+        break;
+      case "Yosemite National Park":
+        setView("Yosemite National Park");
+        break;
+      case "Yellowstone National Park":
+        setView("Yellowstone National Park");
+        break;
+      case "Badlands National Park":
+        setView("Badlands National Park");
+        break;
+      case "Joshua Tree National Park":
+        setView("Joshua Tree National Park");
+        break;
+      default:
+        // Handle default case if needed
+        break;
+    }
   }
-  function viewZion() {
-    setView("Zion National Park")
-  }
-  function viewYosemite() {
-    setView("Yosemite National Park")
-  }
-  function viewYellowstone() {
-    setView("Yellowstone National Park")
-  }
-  function viewBadlands() {
-    setView("Badlands National Park")
-  }
-  function viewJoshuaTree() {
-    setView("Joshua Tree National Park")
-  }
+
   function viewPlanner() {
     setView("Planner")
   }
@@ -72,6 +81,13 @@ function App() {
             </h5>
             <p className="card-text">Location: {el.location}</p>
             <p className="card-text">Category: {el.type}</p>
+            {/* Button to navigate to the respective park view */}
+          <button
+            className="btn btn-primary"
+            onClick={() => handleParkView(el.name)}
+          >
+            View {el.name}
+          </button>
           </div>
         </div>
       </div>
