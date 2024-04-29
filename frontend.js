@@ -55,11 +55,11 @@ function App() {
   }
 
   function viewPlanner() {
-    setView("Planner")
+    setView("Planner");
   }
 
   function viewInfo() {
-    setView("Info")
+    setView("Info");
   }
 
   const viewAllParks =
@@ -82,12 +82,12 @@ function App() {
             <p className="card-text">Location: {el.location}</p>
             <p className="card-text">Category: {el.type}</p>
             {/* Button to navigate to the respective park view */}
-          <button
-            className="btn btn-primary"
-            onClick={() => handleParkView(el.name)}
-          >
-            View {el.name}
-          </button>
+            <button
+              className="btn btn-primary"
+              onClick={() => handleParkView(el.name)}
+            >
+              View {el.name}
+            </button>
           </div>
         </div>
       </div>
@@ -103,17 +103,17 @@ function App() {
           <div class="container">
             <h1>HikersPlanner</h1>
             <div>
-            {/* Navigation Buttons */}
-            <button class="btn btn-primary" onClick={viewHome}>
-              Home
-            </button>
-            <button class="btn btn-primary" onClick={viewPlanner}>
-              Planner
-            </button>
-            <button class="btn btn-primary" onClick={viewInfo}>
-              About
-            </button>
-          </div>
+              {/* Navigation Buttons */}
+              <button class="btn btn-primary" onClick={viewHome}>
+                Home
+              </button>
+              <button class="btn btn-primary" onClick={viewPlanner}>
+                Planner
+              </button>
+              <button class="btn btn-primary" onClick={viewInfo}>
+                About
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -121,10 +121,12 @@ function App() {
         {view === "Home" && (
           <div>
             <div id="con" class="container">
-            <p id="trail">
-              Below you will find all of the national parks we currently offer services for. All you need to do is click on the button 
-              of a park that interests you, and then you'll be viewing the many hikes that you can find in the respected park!
-            </p>
+              <p id="trail">
+                Below you will find all of the national parks we currently offer
+                services for. All you need to do is click on the button of a
+                park that interests you, and then you'll be viewing the many
+                hikes that you can find in the respected park!
+              </p>
             </div>
             <div id="column" className="row row-cols-1 row-cols-sm-2 g-2">
               {park && park.length > 0 && viewAllParks}
@@ -140,7 +142,7 @@ function App() {
         {view === "Planner" && <div></div>}{" "}
         {view === "Info" && (
           <body>
-            <div class="row">
+            <div id="lower" class="row">
               <div class="col m-5">
                 <h2>
                   <strong>Jacob Lehrman</strong>

@@ -18,20 +18,8 @@ body {
 #headerP {
   text-align: left;
 }
-#navbarButton1 {
-  background-color: blue;
-  border-color: blue;
-  color: white;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-#navbarButton2 {
-  background-color: grey;
-  border-color: grey;
-  color: black;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 #bod {
-  background-image: radial-gradient(circle at center, rgb(239, 205, 160),rgb(134, 116, 92));
+  background-image: radial-gradient(circle at center, rgb(239, 205, 160),rgb(192, 176, 156));
   padding: 20px;
 }
 #column {
