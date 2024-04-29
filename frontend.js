@@ -7,12 +7,11 @@ function App() {
   useEffect(() => {
     console.log("Updated park state:", park);
   }, [park]); // This will log the updated value of park whenever it changes
-  
+
   useEffect(() => {
     viewHome(); // Fetch park data on component mount
   }, []); // Empty dependency array ensures this effect runs only once on mount
-  
-  
+
   function viewHome() {
     fetch("http://localhost:8081/listParks")
       .then((response) => response.json())
@@ -26,7 +25,7 @@ function App() {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }  
+  }
 
   const viewAllParks =
     park &&
@@ -79,7 +78,47 @@ function App() {
         {view === "Yellowstone National Park" && <div></div>}{" "}
         {view === "Badlands National Park" && <div></div>}{" "}
         {view === "Joshua Tree National Park" && <div></div>}{" "}
-        {view === "Info" && <div></div>}
+        {view === "Info" && (
+          <body>
+            <div class="row">
+              <div class="col m-5">
+                <h2>
+                  <strong>Jacob Lehrman</strong>
+                </h2>
+                <h4 id="contacts">Contact: jlehrman@iastate.edu</h4>
+              </div>
+              <div class="col my-5">
+                <h2>
+                  <strong>Kenneth Tschida</strong>
+                </h2>
+                <h4 id="contacts">Contact: ktschida@iastate.edu</h4>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col m-5">
+                <h2>
+                  <strong>
+                    SE/COMS 319 Spring 2024 - Construction of User Interfaces
+                  </strong>
+                </h2>
+                <h3>Dr. Ali Jannesari</h3>
+                <h3>April 24th, 2024</h3>
+              </div>
+              <div class="col m-5">
+                <h3>
+                  <strong>Project Description:</strong>
+                </h3>
+                <p>
+                  Our names are Jacob Lehrman and Kenneth Tschida, and in this
+                  project we display all of our knowlegdge and technical ability
+                  when it comes to developing a website from what we've learned
+                  in the class SE/COMS 319 - Construction of User Interfaces at
+                  Iowa State University.
+                </p>
+              </div>
+            </div>
+          </body>
+        )}
       </div>
       <footer>
         <div id="foot">
