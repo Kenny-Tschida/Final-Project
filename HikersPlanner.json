@@ -4,6 +4,7 @@
       "name": "Grand Tetons National Park",
       "location": "Wyoming",
       "type": "Mountain",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Grand_Teton_National_Park%2C_United_States_%28Unsplash_CNLKEp0WY4g%29.jpg",
       "hikes": [
         {
           "title": "Phelps Lake Overlook",
@@ -101,6 +102,7 @@
       "name": "Zion National Park",
       "location": "Utah",
       "type": "Desert",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Zion_National_Park_Valley.jpg",
       "hikes": [
         {
           "title": "Angel's Landing Trail",
@@ -168,6 +170,7 @@
       "name": "Yosemite National Park",
       "location": "California",
       "type": "Mountain",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/California%2C_Yosemite_National_Park%2C_Yosemite_Valley_from_Yosemite_Falls.jpg",
       "hikes": [
         {
           "title": "Vernal and Nevada Falls",
@@ -235,6 +238,7 @@
       "name": "Yellowstone National Park",
       "location": "Wyoming",
       "type": "Forest",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Yellowstone_River_-_Yellowstone_Ntl_Park.jpg",
       "hikes": [
         {
           "title": "Grand Prismatic Hot Spring Overlook",
@@ -302,6 +306,7 @@
       "name": "Badlands National Park",
       "location": "South Dakota",
       "type": "Prairie",
+      "image": "https://live.staticflickr.com/65535/52999575066_1848ecac5e_b.jpg",
       "hikes": [
         {
           "title": "Notch Trail",
@@ -369,6 +374,7 @@
       "name": "Joshua Tree National Park",
       "location": "California",
       "type": "Desert",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/JOSHUA_TREE_NATIONAL_PARK_%2815112433079%29.jpg",
       "hikes": [
         {
           "title": "Ryan Mountain",
