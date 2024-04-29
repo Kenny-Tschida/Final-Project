@@ -1,6 +1,7 @@
 {
   "National_Parks": [
     {
+      "id": 1,
       "name": "Grand Tetons National Park",
       "location": "Wyoming",
       "type": "Mountain",
@@ -99,6 +100,7 @@
       ]
     },
     {
+      "id": 2,
       "name": "Zion National Park",
       "location": "Utah",
       "type": "Desert",
@@ -167,6 +169,7 @@
       ]
     },
     {
+      "id": 3,
       "name": "Yosemite National Park",
       "location": "California",
       "type": "Mountain",
@@ -235,6 +238,7 @@
       ]
     },
     {
+      "id": 4,
       "name": "Yellowstone National Park",
       "location": "Wyoming",
       "type": "Forest",
@@ -303,6 +307,7 @@
       ]
     },
     {
+      "id": 5,
       "name": "Badlands National Park",
       "location": "South Dakota",
       "type": "Prairie",
@@ -371,6 +376,7 @@
       ]
     },
     {
+      "id": 6,
       "name": "Joshua Tree National Park",
       "location": "California",
       "type": "Desert",
