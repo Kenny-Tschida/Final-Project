@@ -61,7 +61,12 @@ function App() {
           <div class="container">
             <h1>HikersPlanner: Home</h1>
           </div>
-          <div class="container">{/* Navigation Buttons */}</div>
+          <div class="container">
+            {/* Navigation Buttons */}
+            <button class="btn btn-primary" onClick={viewHome}>
+              Home
+            </button>
+          </div>
         </div>
       </header>
       <div class="px-5 py-3">
@@ -78,6 +83,7 @@ function App() {
         {view === "Yellowstone National Park" && <div></div>}{" "}
         {view === "Badlands National Park" && <div></div>}{" "}
         {view === "Joshua Tree National Park" && <div></div>}{" "}
+        {view === "Planner" && <div></div>}{" "}
         {view === "Info" && (
           <body>
             <div class="row">
