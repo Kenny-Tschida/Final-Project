@@ -85,9 +85,8 @@ function App() {
           id="navbarHeader"
         >
           <div class="container">
-            <h1>HikersPlanner: Home</h1>
-          </div>
-          <div class="container">
+            <h1>HikersPlanner</h1>
+            <div>
             {/* Navigation Buttons */}
             <button class="btn btn-primary" onClick={viewHome}>
               Home
@@ -98,6 +97,7 @@ function App() {
             <button class="btn btn-primary" onClick={viewInfo}>
               About
             </button>
+          </div>
           </div>
         </div>
       </header>
@@ -161,7 +161,7 @@ function App() {
       <footer>
         <div id="foot">
           <div class="container">
-            <p>HikersPlanner: Home</p>
+            <p>HikersPlanner</p>
             <p>Developed by Jacob Lehrman and Kenneth Tschida</p>
             <p>
               <i>
