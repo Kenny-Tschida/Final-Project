@@ -66,7 +66,7 @@ function App() {
     park &&
     park.map((el) => (
       <div className="col" key={el.id}>
-        <div className="card shadow-sm">
+        <div id="lower" className="card shadow-sm">
           <img
             src={el.image}
             id="catalog_image"
@@ -117,10 +117,16 @@ function App() {
           </div>
         </div>
       </header>
-      <div class="px-5 py-3">
+      <div id="bod" class="px-5 py-3">
         {view === "Home" && (
           <div>
-            <div className="row row-cols-1 row-cols-sm-2 g-2">
+            <div id="con" class="container">
+            <p id="trail">
+              Below you will find all of the national parks we currently offer services for. All you need to do is click on the button 
+              of a park that interests you, and then you'll be viewing the many hikes that you can find in the respected park!
+            </p>
+            </div>
+            <div id="column" className="row row-cols-1 row-cols-sm-2 g-2">
               {park && park.length > 0 && viewAllParks}
             </div>
           </div>
