@@ -1,3 +1,4 @@
+
 [
     {
       "id": 1,
@@ -7,6 +8,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Grand_Teton_National_Park%2C_United_States_%28Unsplash_CNLKEp0WY4g%29.jpg",
       "hikes": [
         {
+          "id": 1,
           "title": "Phelps Lake Overlook",
           "distance": "2.0 Miles",
           "elevation": "416ft",
@@ -17,6 +19,7 @@
           "rating": 4.7
         },
         {
+          "id": 2,
           "title": "Jenny Lake Loop",
           "distance": "7.5 Miles",
           "elevation": "275ft",
@@ -27,6 +30,7 @@
           "rating": 4.9
         },
         {
+          "id": 3,
           "title": "Hidden Falls",
           "distance": "1.1 Miles",
           "elevation": "187ft",
@@ -37,6 +41,7 @@
           "rating": 4.9
         },
         {
+          "id": 4,
           "title": "Cascade Canyon",
           "distance": "10.0 Miles",
           "elevation": "6738ft",
@@ -47,6 +52,7 @@
           "rating": 4.4
         },
         {
+          "id": 5,
           "title": "Lakeshore Trail",
           "distance": "2.5 Miles",
           "elevation": "85ft",
@@ -57,6 +63,7 @@
           "rating": 4.2
         },
         {
+          "id": 6,
           "title": "Marion Lake Loop",
           "distance": "5.1 Miles",
           "elevation": "1200ft",
@@ -67,6 +74,7 @@
           "rating": 4.6
         },
         {
+          "id": 7,
           "title": "Static Peak Divide",
           "distance": "16.2 Miles",
           "elevation": "5000ft",
@@ -77,6 +85,7 @@
           "rating": 4.4
         },
         {
+          "id": 8,
           "title": "Taggert-Bradley Lake Loop",
           "distance": "5.5 Miles",
           "elevation": "585ft",
@@ -87,6 +96,7 @@
           "rating": 4.5
         },
         {
+          "id": 9,
           "title": "Schwabacher Landing Trail",
           "distance": "1.3 Miles",
           "elevation": "10ft",
@@ -106,6 +116,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Zion_National_Park_Valley.jpg",
       "hikes": [
         {
+          "id": 1,
           "title": "Angel's Landing Trail",
           "distance": "4.3 Miles",
           "elevation": "1,827ft",
@@ -116,6 +127,7 @@
           "rating": 4.9
         },
         {
+          "id": 2,
           "title": "The Watchman Trail",
           "distance": "3.1 Miles",
           "elevation": "636ft",
@@ -126,6 +138,7 @@
           "rating": 3.3
         },
         {
+          "id": 3,
           "title": "Emerald Pools Trail",
           "distance": "3.0 Miles",
           "elevation": "620ft",
@@ -136,6 +149,7 @@
           "rating": 4.8
         },
         {
+          "id": 4,
           "title": "Zion Canyon Overlook",
           "distance": "0.9 Miles",
           "elevation": "157ft",
@@ -146,6 +160,7 @@
           "rating": 5.0
         },
         {
+          "id": 5,
           "title": "The Narrows",
           "distance": "8.9 Miles",
           "elevation": "695ft",
@@ -156,6 +171,7 @@
           "rating": 4.7
         },
         {
+          "id": 6,
           "title": "Scout Lookout",
           "distance": "3.6 Miles",
           "elevation": "1115ft",
@@ -175,6 +191,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/California%2C_Yosemite_National_Park%2C_Yosemite_Valley_from_Yosemite_Falls.jpg",
       "hikes": [
         {
+          "id": 1,
           "title": "Vernal and Nevada Falls",
           "distance": "6.4 Miles",
           "elevation": "2200ft",
@@ -185,6 +202,7 @@
           "rating": 4.8
         },
         {
+          "id": 2,
           "title": "Half Dome via John Muir Trail",
           "distance": "16.5 Miles",
           "elevation": "5300ft",
@@ -195,6 +213,7 @@
           "rating": 4.9
         },
         {
+          "id": 3,
           "title": "Lower Yosemite Falls",
           "distance": "1.2 Miles",
           "elevation": "50ft",
@@ -205,6 +224,7 @@
           "rating": 4.6
         },
         {
+          "id": 4,
           "title": "Upper Yosemite Falls",
           "distance": "6.6 Miles",
           "elevation": "3250ft",
@@ -215,6 +235,7 @@
           "rating": 4.7
         },
         {
+          "id": 5,
           "title": "Mirror Lake Loop",
           "distance": "4.6 Miles",
           "elevation": "300ft",
@@ -225,6 +246,7 @@
           "rating": 4.5
         },
         {
+          "id": 6,
           "title": "Columbia Rock Trail",
           "distance": "2.2 Miles",
           "elevation": "1000ft",
@@ -244,6 +266,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Yellowstone_River_-_Yellowstone_Ntl_Park.jpg",
       "hikes": [
         {
+          "id": 1,
           "title": "Grand Prismatic Hot Spring Overlook",
           "distance": "1.5 Miles",
           "elevation": "200ft",
@@ -254,6 +277,7 @@
           "rating": 4.5
         },
         {
+          "id": 2,
           "title": "Upper Geyser Basin and Old Faithful Observation Point Loop",
           "distance": "4.9 Miles",
           "elevation": "360ft",
@@ -264,6 +288,7 @@
           "rating": 4.9
         },
         {
+          "id": 3,
           "title": "Mammoth Terraces",
           "distance": "2.5 Miles",
           "elevation": "380ft",
@@ -274,6 +299,7 @@
           "rating": 4.3
         },
         {
+          "id": 4,
           "title": "Mud Volcano",
           "distance": "0.8 Miles",
           "elevation": "120ft",
@@ -284,6 +310,7 @@
           "rating": 4.6
         },
         {
+          "id": 5,
           "title": "Beaver Ponds Trail Loop",
           "distance": "5.5 Miles",
           "elevation": "760ft",
@@ -294,6 +321,7 @@
           "rating": 4.4
         },
         {
+          "id": 6,
           "title": "Dunraven Pass to Mount Washburn",
           "distance": "6.8 Miles",
           "elevation": "1400ft",
@@ -313,6 +341,7 @@
       "image": "https://live.staticflickr.com/65535/52999575066_1848ecac5e_b.jpg",
       "hikes": [
         {
+          "id": 1,
           "title": "Notch Trail",
           "distance": "1.5 Miles",
           "elevation": "127ft",
@@ -323,6 +352,7 @@
           "rating": 4.7
         },
         {
+          "id": 2,
           "title": "The Door Trail",
           "distance": "0.9 Miles",
           "elevation": "22ft",
@@ -333,6 +363,7 @@
           "rating": 4.6
         },
         {
+          "id": 3,
           "title": "The Window Trail",
           "distance": "0.3 Miles",
           "elevation": "13ft",
@@ -343,6 +374,7 @@
           "rating": 4.3
         },
         {
+          "id": 4,
           "title": "Castle Trail",
           "distance": "10.3 Miles",
           "elevation": "305ft",
@@ -353,6 +385,7 @@
           "rating": 4.4
         },
         {
+          "id": 5,
           "title": "Cliff Shelf Nature Trail",
           "distance": "0.5",
           "elevation": "65ft",
@@ -363,10 +396,11 @@
           "rating": 4.4
         },
         {
+          "id": 6,
           "title": "Big Badlands Overlook",
           "distance": "0.2 Miles",
           "elevation": "3ft",
-          "difficulty": "Master",
+          "difficulty": "IMPOSSIBLE",
           "image": "https://live.staticflickr.com/4135/4755459947_05e0c393aa_b.jpg",
           "duration": "5 mins",
           "location": "43.727990364005855, -101.98404247949809",
@@ -382,6 +416,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/JOSHUA_TREE_NATIONAL_PARK_%2815112433079%29.jpg",
       "hikes": [
         {
+          "id": 1,
           "title": "Ryan Mountain",
           "distance": "2.9 Miles",
           "elevation": "1062ft",
@@ -392,6 +427,7 @@
           "rating": 4.7
         },
         {
+          "id": 2,
           "title": "Barker Dam",
           "distance": "1.3 Miles",
           "elevation": "59ft",
@@ -402,6 +438,7 @@
           "rating": 4.7
         },
         {
+          "id": 3,
           "title": "Lost Palms Oasis",
           "distance": "7.4 Miles",
           "elevation": "1046ft",
@@ -412,6 +449,7 @@
           "rating": 4.7
         },
         {
+          "id": 4,
           "title": "Hidden Valley",
           "distance": "1.0 Miles",
           "elevation": "118ft",
@@ -422,6 +460,7 @@
           "rating": 4.8
         },
         {
+          "id": 5,
           "title": "Arch Rock Trail",
           "distance": "1.2 Miles",
           "elevation": "88ft",
@@ -432,6 +471,7 @@
           "rating": 4.6
         },
         {
+          "id": 6,
           "title": "Skull Rock",
           "distance": "1.7 Miles",
           "elevation": "147ft",
@@ -441,6 +481,9 @@
           "location": "33.9980338799786, -116.0598338612284",
           "rating": 4.5
         }
+      ]
+    }
+  ]
       ]
     }
   ]
