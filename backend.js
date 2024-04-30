@@ -50,6 +50,28 @@ app.get("/:type", async (req, res) => {
   }
 });
 
+app.get("/gethikes/:id", async (req, res) => {
+  try{
+    const id = Number(req.params.id);
+    console.log("Parks to find :", id);
+    await client.connect();
+    console.log("Node connected successfully to GET-id MongoDB");
+    const query = {"id": id};
+    const options = {projection: { hikes: 1, _id:0}};
+    const results = await db
+    .collection("HikersPlanner")
+    .find(query, options)
+    .limit(100)
+    .toArray();
+    console.log(results);
+    res.status(200);
+    res.send(results);
+  } catch (error) {
+    console.error("An error occurred:", error);
+    res.status(500).send({ error: 'An internal server error occurred' });
+  }
+});
+
 app.listen(port, () => {
   console.log("App listening at http://%s:%s", host, port);
 });
