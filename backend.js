@@ -29,6 +29,26 @@ app.get("/listParks", async (req, res) => {
   res.status(200);
   res.send(results);
 });
+app.get("/:type", async (req, res) => {
+  try{
+    const parkType = String(req.params.type);
+    console.log("Parks to find :", parkType);
+    await client.connect();
+    console.log("Node connected successfully to GET-id MongoDB");
+    const query = {"type": parkType};
+    const results = await db
+    .collection("HikersPlanner")
+    .find(query)
+    .limit(100)
+    .toArray();
+    console.log(results);
+    res.status(200);
+    res.send(results);
+  } catch (error) {
+    console.error("An error occurred:", error);
+    res.status(500).send({ error: 'An internal server error occurred' });
+  }
+});
 
 app.listen(port, () => {
   console.log("App listening at http://%s:%s", host, port);
