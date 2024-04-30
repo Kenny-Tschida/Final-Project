@@ -60,9 +60,7 @@ app.get("/gethikes/:id", async (req, res) => {
     const options = {projection: { hikes: 1, _id:0}};
     const results = await db
     .collection("HikersPlanner")
-    .find(query, options)
-    .limit(100)
-    .toArray();
+    .findOne(query, options)
     console.log(results);
     res.status(200);
     res.send(results);
