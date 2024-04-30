@@ -42,30 +42,76 @@ function App() {
     // Set the view based on the park name
     switch (parkName) {
       case "Grand Tetons National Park":
-        fetch("http://localhost:8081/gethikes/1")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Fetched data:", data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-        setView(parkName);
-        break;
+      fetch("http://localhost:8081/gethikes/1")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Fetched data:", data);
+          setHike(data.hikes);
+          setView(parkName);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+      break;
       case "Zion National Park":
-        setView(parkName);
+        fetch("http://localhost:8081/gethikes/2")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Fetched data:", data);
+          setHike(data.hikes);
+          setView(parkName);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
         break;
       case "Yosemite National Park":
-        setView(parkName);
+        fetch("http://localhost:8081/gethikes/3")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Fetched data:", data);
+          setHike(data.hikes);
+          setView(parkName);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
         break;
       case "Yellowstone National Park":
-        setView(parkName);
+        fetch("http://localhost:8081/gethikes/4")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Fetched data:", data);
+          setHike(data.hikes);
+          setView(parkName);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
         break;
       case "Badlands National Park":
-        setView(parkName);
+        fetch("http://localhost:8081/gethikes/5")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Fetched data:", data);
+          setHike(data.hikes);
+          setView(parkName);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
         break;
       case "Joshua Tree National Park":
-        setView(parkName);
+        fetch("http://localhost:8081/gethikes/6")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Fetched data:", data);
+          setHike(data.hikes);
+          setView(parkName);
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
         break;
       default:
         // Handle default case if needed
@@ -116,32 +162,27 @@ function App() {
       </div>
     ));
 
-  const viewAllHikes =
-    hike &&
-    hike.map((el) => (
-      <div className="col" key={el.id}>
+    const viewAllHikes = hike.map((hike) => (
+      <div className="col" key={hike.id}>
         <div id="lower" className="card shadow-sm">
           <img
-            src={el.image}
-            id="catalog_image"
+            src={hike.image}
             className="card-img-top"
-            width="900"
-            height="500"
-            alt="image"
+            width="500"
+            height="400"
+            alt="Hike"
           />
           <div className="card-body">
-            <h5 className="card-text">
-              <strong>{el.title}</strong>
-            </h5>
-            <p className="card-text">Distance: {el.distance}</p>
-            <p className="card-text">Elevation: {el.elevation}</p>
-            <p className="card-text">Difficulty: {el.difficulty}</p>
-            <p className="card-text">Duration: {el.duration}</p>
-            <p className="card-text">Rating: {el.rating}</p>
+            <h5 className="card-text"><strong>{hike.title}</strong></h5>
+            <p className="card-text">Distance: {hike.distance}</p>
+            <p className="card-text">Elevation: {hike.elevation}</p>
+            <p className="card-text">Duration: {hike.duration}</p>
+            <p className="card-text">Difficulty: {hike.difficulty}</p>
+            <p className="card-text">Rating: {hike.rating}</p>
           </div>
         </div>
       </div>
-    ));
+    ));    
 
   return (
     <div>
@@ -194,7 +235,7 @@ function App() {
                   viewing the details of each hike!
                 </p>
               </div>
-              <div id="column" className="row row-cols-1 row-cols-sm-2 g-2">
+              <div id="column" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 {viewAllHikes}
               </div>
             </div>
@@ -210,7 +251,7 @@ function App() {
                   viewing the details of each hike!
                 </p>
               </div>
-              <div id="column" className="row row-cols-1 row-cols-sm-2 g-2">
+              <div id="column" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 {viewAllHikes}
               </div>
             </div>
@@ -225,7 +266,7 @@ function App() {
                   viewing the details of each hike!
                 </p>
               </div>
-              <div id="column" className="row row-cols-1 row-cols-sm-2 g-2">
+              <div id="column" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 {viewAllHikes}
               </div>
             </div>
@@ -240,7 +281,7 @@ function App() {
                   viewing the details of each hike!
                 </p>
               </div>
-              <div id="column" className="row row-cols-1 row-cols-sm-2 g-2">
+              <div id="column" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 {viewAllHikes}
               </div>
             </div>
@@ -255,7 +296,7 @@ function App() {
                   viewing the details of each hike!
                 </p>
               </div>
-              <div id="column" className="row row-cols-1 row-cols-sm-2 g-2">
+              <div id="column" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 {viewAllHikes}
               </div>
             </div>
@@ -270,7 +311,7 @@ function App() {
                   viewing the details of each hike!
                 </p>
               </div>
-              <div id="column" className="row row-cols-1 row-cols-sm-2 g-2">
+              <div id="column" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 {viewAllHikes}
               </div>
             </div>
