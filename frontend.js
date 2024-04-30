@@ -17,9 +17,8 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Fetched data:", data);
-        const nationalParks = data[0].National_Parks;
-        setPark(nationalParks);
-        console.log("Updated park state:", nationalParks);
+        setPark(data);
+        console.log("Updated park state:", data);
         setView("Home");
       })
       .catch((error) => {
