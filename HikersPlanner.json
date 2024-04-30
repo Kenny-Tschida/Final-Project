@@ -278,7 +278,7 @@
         },
         {
           "id": 2,
-          "title": "Upper Geyser Basin and Old Faithful Observation Point Loop",
+          "title": "Upper Geyser Basin and Old Faithful Observation Point",
           "distance": "4.9 Miles",
           "elevation": "360ft",
           "difficulty": "Moderate",
@@ -421,7 +421,7 @@
           "distance": "2.9 Miles",
           "elevation": "1062ft",
           "difficulty": "Moderate",
-          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYtQJ8JQLbeK9YvQSCLFt23MlCbOOmHU0IPw&s",
+          "image": "https://live.staticflickr.com/4483/26347644949_fceb852aeb_b.jpg",
           "duration": "1-2 Hours",
           "location": "33.986645090290004, -116.13516565760445",
           "rating": 4.7
@@ -454,7 +454,7 @@
           "distance": "1.0 Miles",
           "elevation": "118ft",
           "difficulty": "Novice",
-          "image": "https://live.staticflickr.com/4679/38975668172_772e9d10d6_b.jpg",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Joshua_Tree_NP_Hidden_valley_1.jpg",
           "duration": "30 mins",
           "location": "34.022970342244285, -116.1817583624665",
           "rating": 4.8
@@ -465,7 +465,7 @@
           "distance": "1.2 Miles",
           "elevation": "88ft",
           "difficulty": "Novice",
-          "image": "https://live.staticflickr.com/65535/50633767948_b2364a7b65_b.jpg",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Arch_rock_startrail.jpg",
           "duration": "30 mins",
           "location": "33.98961090014271, -116.0229731323924",
           "rating": 4.6
