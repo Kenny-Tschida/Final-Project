@@ -376,7 +376,7 @@ function App() {
                   height="400"
                   alt="Hike"
                 />
-                <gmp-map
+                <gmp-map id="map"
                   center={singleHike.location}
                   zoom="11"
                   map-id="DEMO_MAP_ID"
@@ -393,11 +393,11 @@ function App() {
                 <strong>{singleHike.title}</strong>
               </h1>
               <div id="divDescription">
-              <p className="card-text">Distance: {singleHike.distance}</p>
-          <p className="card-text">Elevation: {singleHike.elevation}</p>
-          <p className="card-text">Duration: {singleHike.duration}</p>
-          <p className="card-text">Difficulty: {singleHike.difficulty}</p>
-          <p className="card-text">Rating: {singleHike.rating}</p>
+                <p className="card-text">Distance: {singleHike.distance}</p>
+                <p className="card-text">Elevation: {singleHike.elevation}</p>
+                <p className="card-text">Duration: {singleHike.duration}</p>
+                <p className="card-text">Difficulty: {singleHike.difficulty}</p>
+                <p className="card-text">Rating: {singleHike.rating}</p>
               </div>
             </div>
           </div>
