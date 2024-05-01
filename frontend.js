@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
+import jImage from './images/IMG_1284.jpeg';
+import kImage from './images/IMG_3037.PNG';
 
 function App() {
   const [view, setView] = useState("Home");
@@ -17,23 +19,38 @@ function App() {
     rating: 0,
   });
   const [planner, setPlanner] = useState([]);
+  const [whatParks, setWhatParks] = useState([]);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const [dataF, setDataF] = useState({});
+
+  const updateHooks = () => {
+    setPlanner([]);
+    setWhatParks([]);
+    setView("Home");
+    setDataF(dataF);
+    setSingleHike(singleHike);
+  };
 
   const onSubmit = (data) => {
-    viewConfirm();
+    if (planner.length > 0) {
+      setDataF(data);
+      viewConfirm();
+    } else {
+      console.log("Please select at least one hike before submitting.");
+    }
   };
 
   useEffect(() => {
     console.log("Updated park state:", park);
-  }, [park]); // This will log the updated value of park whenever it changes
+  }, [park]);
 
   useEffect(() => {
-    viewHome(); // Fetch park data on component mount
-  }, []); // Empty dependency array ensures this effect runs only once on mount
+    viewHome();
+  }, []);
 
   function viewHome() {
     fetch("http://localhost:8081/listParks")
@@ -169,6 +186,8 @@ function App() {
             {/* Button to navigate to the respective park view */}
             <button
               className="btn btn-primary"
+              id="return"
+              href="#"
               onClick={() => handleParkView(el.name)}
             >
               View {el.name}
@@ -200,10 +219,79 @@ function App() {
           <button className="btn btn-primary" onClick={() => viewHike(el)}>
             View {el.title}
           </button>
+          <button
+            className="btn btn-secondary"
+            onClick={() => addToPlanner(el)}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-secondary"
+            onClick={() => removeFromPlanner(el)}
+          >
+            Remove
+          </button>
         </div>
       </div>
     </div>
   ));
+
+  const addToPlanner = (el) => {
+    const updatedPlanner = Array.isArray(planner) ? planner.slice() : [];
+    const isHikeAlreadyAdded = updatedPlanner.some(
+      (plannerHike) => plannerHike.title === el.title
+    );
+
+    if (!isHikeAlreadyAdded) {
+      updatedPlanner.push(el);
+      setPlanner(updatedPlanner);
+      if (!whatParks.includes(el.park)) {
+        setWhatParks((prevParks) => [...prevParks, el.park]);
+      }
+    } else {
+      console.log("Error: Hike is already in Planner");
+    }
+  };
+
+  const removeFromPlanner = (el) => {
+    const updatedPlanner = Array.isArray(planner) ? planner.slice() : [];
+    const filteredPlanner = updatedPlanner.filter(
+      (plannerHike) => plannerHike.title !== el.title
+    );
+    setPlanner(filteredPlanner);
+    const parkHikes = planner.some((hike) => hike.park === el.park);
+    if (!parkHikes) {
+      setWhatParks((prevParks) => prevParks.filter((park) => park !== el.park));
+    }
+  };
+
+  const listPlannerHikes =
+  Array.isArray(planner) &&
+  planner.map((el) => (
+    <div key={el.id}>
+      <img class="img-fluid" src={el.image} width={250} />
+      <div>{el.title}</div>
+      {view !== "Confirm" && (
+        <button
+          className="btn btn-secondary"
+          onClick={() => removeFromPlanner(el)}
+        >
+          Remove
+        </button>
+      )}
+    </div>
+  ));
+
+
+  const listWhatParks = () => {
+    return whatParks.map((park, index) => {
+      if (index === whatParks.length - 1) {
+        return park;
+      } else {
+        return park + ", ";
+      }
+    });
+  };
 
   return (
     <div>
@@ -376,7 +464,8 @@ function App() {
                   height="400"
                   alt="Hike"
                 />
-                <gmp-map id="map"
+                <gmp-map
+                  id="map"
                   center={singleHike.location}
                   zoom="11"
                   map-id="DEMO_MAP_ID"
@@ -399,11 +488,44 @@ function App() {
                 <p className="card-text">Difficulty: {singleHike.difficulty}</p>
                 <p className="card-text">Rating: {singleHike.rating}</p>
               </div>
+              <div>
+                <button
+                  className="btn btn-primary"
+                  onClick={() => setView(singleHike.park)}
+                >
+                  Return to {singleHike.park}
+                </button>
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => addToPlanner(singleHike)}
+                >
+                  Add
+                </button>
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => removeFromPlanner(singleHike)}
+                >
+                  Remove
+                </button>
+              </div>
             </div>
           </div>
         )}{" "}
         {view === "Planner" && (
           <div>
+            <div id="title">
+              <div>
+                <h4>Visited National Parks: {listWhatParks()}</h4>
+                <h4>Number of hikes selected: {planner.length}</h4>
+                <h6>
+                  <i>
+                    Please note that you must select at least one hike before
+                    submitting
+                  </i>
+                </h6>
+              </div>
+            </div>
+            <div id="des">{listPlannerHikes}</div>
             <form onSubmit={handleSubmit(onSubmit)} className="container mt-5">
               <div className="form-group">
                 <input
@@ -434,7 +556,34 @@ function App() {
             </form>
           </div>
         )}{" "}
-        {view === "Confirm" && <div></div>}{" "}
+        {view === "Confirm" && (
+          <div>
+            <div className="container mt-5">
+              <h1 id="title">Planner summary:</h1>
+              <h4 id="title">National Parks Visited: {listWhatParks()}</h4>
+              <h4 id="title">Hikes Selected: {planner.length}</h4>
+              <div id="des">{listPlannerHikes}</div>
+              <h1 id="title">Contact summary:</h1>
+              <h4 id="title">Name: {dataF.fullName}</h4>
+              <h4 id="title">Email: {dataF.email}</h4>
+              <form
+                onSubmit={handleSubmit(updateHooks)}
+                className="container mt-5"
+              >
+                <div className="form-group">
+                  <input
+                    {...register("Feedback", { required: false })}
+                    placeholder="Feedback"
+                    className="form-control"
+                  />
+                </div>
+                <button class="btn btn-primary" type="submit">
+                  Back to Home
+                </button>
+              </form>
+            </div>
+          </div>
+        )}{" "}
         {view === "Info" && (
           <body>
             <div id="lower" class="row">
@@ -443,12 +592,14 @@ function App() {
                   <strong>Jacob Lehrman</strong>
                 </h2>
                 <h4 id="contacts">Contact: jlehrman@iastate.edu</h4>
+                <img src={jImage} alt="JAKE!"height="350px"></img>
               </div>
               <div class="col my-5">
                 <h2>
                   <strong>Kenneth Tschida</strong>
                 </h2>
                 <h4 id="contacts">Contact: ktschida@iastate.edu</h4>
+                <img src={kImage} alt="KENNY!"height="350px"></img>
               </div>
             </div>
             <div class="row">
