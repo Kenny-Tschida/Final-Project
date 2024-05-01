@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import jImage from './images/IMG_1284.jpeg';
-import kImage from './images/IMG_3037.PNG';
+import jImage from "./images/IMG_1284.jpeg";
+import kImage from "./images/IMG_3037.PNG";
 
 function App() {
   const [view, setView] = useState("Home");
@@ -266,22 +266,32 @@ function App() {
   };
 
   const listPlannerHikes =
-  Array.isArray(planner) &&
-  planner.map((el) => (
-    <div key={el.id}>
-      <img class="img-fluid" src={el.image} width={250} />
-      <div>{el.title}</div>
-      {view !== "Confirm" && (
-        <button
-          className="btn btn-secondary"
-          onClick={() => removeFromPlanner(el)}
-        >
-          Remove
-        </button>
-      )}
-    </div>
-  ));
-
+    Array.isArray(planner) &&
+    planner.map((el) => (
+      <div className="col" key={el.id}>
+        <div id="lower" className="card shadow-sm">
+          <img
+            className="card-img-top"
+            alt="Hike"
+            src={el.image}
+            width={500}
+            height={400}
+          />
+          <div className="card-body">
+            <div className="card-text">{el.title}</div>
+            <div className="card-text">{el.park}</div>
+            {view !== "Confirm" && (
+              <button
+                className="btn btn-secondary"
+                onClick={() => removeFromPlanner(el)}
+              >
+                Remove from Planner
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    ));
 
   const listWhatParks = () => {
     return whatParks.map((park, index) => {
@@ -454,65 +464,74 @@ function App() {
           </div>
         )}{" "}
         {view === "Hike" && (
-          <div>
-            <div>
-              <div id="divPic">
-                <img
-                  src={singleHike.image}
-                  className="card-img-top"
-                  width="500"
-                  height="400"
-                  alt="Hike"
-                />
-                <gmp-map
-                  id="map"
-                  center={singleHike.location}
-                  zoom="11"
-                  map-id="DEMO_MAP_ID"
-                >
-                  <gmp-advanced-marker
-                    position={singleHike.location}
-                    title="Lakeshore Trail"
-                  ></gmp-advanced-marker>
-                </gmp-map>
+          <div className="container mt-5">
+            <div id="column" class="row row-cols-1 g-1">
+              <div className="d-flex flex-row">
+                <div id="lower" className="card shadow-sm">
+                  <img
+                    src={singleHike.image}
+                    className="card-img-top"
+                    width="500"
+                    height="400"
+                    alt="Hike"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-text">
+                      <strong>{singleHike.title}</strong>
+                    </h5>
+                    <p className="card-text">Distance: {singleHike.distance}</p>
+                    <p className="card-text">
+                      Elevation: {singleHike.elevation}
+                    </p>
+                    <p className="card-text">Duration: {singleHike.duration}</p>
+                    <p className="card-text">
+                      Difficulty: {singleHike.difficulty}
+                    </p>
+                    <p className="card-text">Rating: {singleHike.rating}</p>
+                  </div>
+                </div>
+                <div id="lower" className="card shadow-sm">
+                  <gmp-map
+                    id="map"
+                    center={singleHike.location}
+                    zoom="11"
+                    map-id="DEMO_MAP_ID"
+                  >
+                    <gmp-advanced-marker
+                      position={singleHike.location}
+                    ></gmp-advanced-marker>
+                  </gmp-map>
+                  <div className="card-body">
+                    <h5 className="card-text">
+                      <strong>Located in {singleHike.park}</strong>
+                    </h5>
+                    <h6>Coordinates: {singleHike.location}</h6>
+                  </div>
+                </div>
               </div>
             </div>
-            <div id="divTitle">
-              <h1>
-                <strong>{singleHike.title}</strong>
-              </h1>
-              <div id="divDescription">
-                <p className="card-text">Distance: {singleHike.distance}</p>
-                <p className="card-text">Elevation: {singleHike.elevation}</p>
-                <p className="card-text">Duration: {singleHike.duration}</p>
-                <p className="card-text">Difficulty: {singleHike.difficulty}</p>
-                <p className="card-text">Rating: {singleHike.rating}</p>
-              </div>
-              <div>
-                <button
-                  className="btn btn-primary"
-                  onClick={() => setView(singleHike.park)}
-                >
-                  Return to {singleHike.park}
-                </button>
-                <button
-                  className="btn btn-secondary"
-                  onClick={() => addToPlanner(singleHike)}
-                >
-                  Add
-                </button>
-                <button
-                  className="btn btn-secondary"
-                  onClick={() => removeFromPlanner(singleHike)}
-                >
-                  Remove
-                </button>
-              </div>
-            </div>
+            <button
+              className="btn btn-primary"
+              onClick={() => setView(singleHike.park)}
+            >
+              Return to {singleHike.park}
+            </button>
+            <button
+              className="btn btn-secondary"
+              onClick={() => addToPlanner(singleHike)}
+            >
+              Add
+            </button>
+            <button
+              className="btn btn-secondary"
+              onClick={() => removeFromPlanner(singleHike)}
+            >
+              Remove
+            </button>
           </div>
         )}{" "}
         {view === "Planner" && (
-          <div>
+          <div className="container mt-5">
             <div id="title">
               <div>
                 <h4>Visited National Parks: {listWhatParks()}</h4>
@@ -525,7 +544,9 @@ function App() {
                 </h6>
               </div>
             </div>
-            <div id="des">{listPlannerHikes}</div>
+            <div id="column" class="row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              {listPlannerHikes}
+            </div>
             <form onSubmit={handleSubmit(onSubmit)} className="container mt-5">
               <div className="form-group">
                 <input
@@ -562,7 +583,12 @@ function App() {
               <h1 id="title">Planner summary:</h1>
               <h4 id="title">National Parks Visited: {listWhatParks()}</h4>
               <h4 id="title">Hikes Selected: {planner.length}</h4>
-              <div id="des">{listPlannerHikes}</div>
+              <div
+                id="column"
+                class="row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+              >
+                {listPlannerHikes}
+              </div>
               <h1 id="title">Contact summary:</h1>
               <h4 id="title">Name: {dataF.fullName}</h4>
               <h4 id="title">Email: {dataF.email}</h4>
@@ -592,14 +618,14 @@ function App() {
                   <strong>Jacob Lehrman</strong>
                 </h2>
                 <h4 id="contacts">Contact: jlehrman@iastate.edu</h4>
-                <img src={jImage} alt="JAKE!"height="350px"></img>
+                <img src={jImage} alt="JAKE!" height="350px"></img>
               </div>
               <div class="col my-5">
                 <h2>
                   <strong>Kenneth Tschida</strong>
                 </h2>
                 <h4 id="contacts">Contact: ktschida@iastate.edu</h4>
-                <img src={kImage} alt="KENNY!"height="350px"></img>
+                <img src={kImage} alt="KENNY!" height="350px"></img>
               </div>
             </div>
             <div class="row">
