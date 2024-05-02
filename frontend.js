@@ -163,7 +163,53 @@ function App() {
   function viewInfo() {
     setView("Info");
   }
+  function viewAdminLogin() {
+    setView("Login");
+  }
+  function viewAdminPage(){
+    setView("Admin");
+  }
+  function checkPass(){
+    var text1 = document.getElementById("text1").value;
+    if(text1=="LOL"){
+      viewAdminPage();
+    } else{
+      viewAdminLogin();
+      var info = document.getElementById("status");
+      info.innerHTML = "<p style=color:red>Password Incorrect</p>"
+    }
+  }
+  function deleteMethod(id, id2) {
+    console.log("Call Delete ", id, id2);
+    fetch("http://localhost:8081/deleteProduct", {
+      method: "DELETE",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        id: id,
+        id2: id2
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        document.getElementById("showDeleteData").innerHTML = JSON.stringify(data);
+      })
+      .catch((err) => console.log("Error:" + err));
+  }
+  function getDeleteMethod() {
+    var id = parseInt(document.getElementById("deleteIntegerInput").value);
+    fetch("http://localhost:8081/" + id)
+      .then((response) => response.json())
+      .then((data) => {
+        setSingleHike(data);
+      });
+  }
 
+  function deleteButton() {
+    var inputElement = document.getElementById("deleteIntegerInput");
+    var inputValue = inputElement.value;
+    deleteMethod(inputValue);
+  }
   const viewAllParks =
     park &&
     park.map((el) => (
@@ -322,6 +368,9 @@ function App() {
               </button>
               <button class="btn btn-primary" onClick={viewInfo}>
                 About
+              </button>
+              <button class="btn btn-primary" onClick={viewAdminLogin}>
+                Admin Login
               </button>
             </div>
           </div>
@@ -653,6 +702,34 @@ function App() {
             </div>
           </body>
         )}
+        {view === "Login" && (
+            <div className="container mt-5">
+            <div id="title">
+              <h1>Please Input the admin password.</h1>
+            </div>
+            <input id="text1" type="text"></input>
+            <button class="btn btn-primary" onClick={checkPass} >Login</button>
+            <div id="status"></div>
+            </div>
+        )}
+        {view === "Admin" && (
+          <div>
+          <h1 class="py-3">Delete Method</h1>
+          <label htmlFor="deleteIntegerInput">Hike Title: </label>
+          <input
+            id="deleteIntegerInput"
+          />
+          <button class="btn btn-primary" onClick={deleteButton}>
+            Delete
+          </button>
+
+          <h1>Output:</h1>
+          <pre id="showDeleteData"></pre>
+        </div>
+      )}
+
+
+
       </div>
       <footer>
         <div id="foot">
