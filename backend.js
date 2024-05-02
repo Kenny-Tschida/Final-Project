@@ -70,6 +70,23 @@ app.get("/gethikes/:id", async (req, res) => {
   }
 });
 
+app.delete("/deleteProduct", async (req, res) => {
+try{
+  await client.connect();
+  const values = Object.values(req.body);
+  const title = values[0];
+  console.log("Item to delete :", title);
+  const query = {"name":title};
+  const results = await db.collection("HikersPlanner").deleteOne(query);
+  res.status(200);
+  res.send(results);
+
+}catch (error){
+  console.error("Error deleting product:", error);
+  res.status(500).send({ message: "Internal Server Error" });
+}
+})
+
 app.listen(port, () => {
   console.log("App listening at http://%s:%s", host, port);
 });
