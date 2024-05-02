@@ -67,85 +67,18 @@ function App() {
       });
   }
 
-  function handleParkView(parkName) {
+  function handleParkView(parkID) {
     // Set the view based on the park name
-    switch (parkName) {
-      case "Grand Tetons National Park":
-        fetch("http://localhost:8081/gethikes/1")
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Fetched data:", data);
-            setHike(data.hikes);
-            setView(parkName);
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-        break;
-      case "Zion National Park":
-        fetch("http://localhost:8081/gethikes/2")
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Fetched data:", data);
-            setHike(data.hikes);
-            setView(parkName);
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-        break;
-      case "Yosemite National Park":
-        fetch("http://localhost:8081/gethikes/3")
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Fetched data:", data);
-            setHike(data.hikes);
-            setView(parkName);
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-        break;
-      case "Yellowstone National Park":
-        fetch("http://localhost:8081/gethikes/4")
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Fetched data:", data);
-            setHike(data.hikes);
-            setView(parkName);
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-        break;
-      case "Badlands National Park":
-        fetch("http://localhost:8081/gethikes/5")
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Fetched data:", data);
-            setHike(data.hikes);
-            setView(parkName);
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-        break;
-      case "Joshua Tree National Park":
-        fetch("http://localhost:8081/gethikes/6")
-          .then((response) => response.json())
-          .then((data) => {
-            console.log("Fetched data:", data);
-            setHike(data.hikes);
-            setView(parkName);
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-        break;
-      default:
-        // Handle default case if needed
-        break;
-    }
+    fetch("http://localhost:8081/gethikes/" + parkID)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Fetched data:", data);
+        setHike(data.hikes);
+        setView("Park");
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }
 
   function viewHike(data) {
@@ -167,14 +100,14 @@ function App() {
   function viewAdminLogin() {
     setView("Login");
   }
-  function viewAdminPage(){
+  function viewAdminPage() {
     setView("Admin");
   }
-  function checkPass(){
+  function checkPass() {
     var text1 = document.getElementById("text1").value;
-    if(text1=="LOL"){
+    if (text1 == "LOL") {
       viewAdminPage();
-    } else{
+    } else {
       viewAdminLogin();
       var info = document.getElementById("status");
       info.innerHTML = "<p style=color:red>Password Incorrect</p>"
@@ -182,7 +115,7 @@ function App() {
   }
   function deleteMethod(id, id2) {
     console.log("Call Delete ", id, id2);
-    fetch("http://localhost:8081/deleteProduct", {
+    fetch("http://localhost:8081/deletePark", {
       method: "DELETE",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -197,22 +130,69 @@ function App() {
       })
       .catch((err) => console.log("Error:" + err));
   }
-  function getDeleteMethod() {
-    var id = parseInt(document.getElementById("deleteIntegerInput").value);
-    fetch("http://localhost:8081/" + id)
-      .then((response) => response.json())
-      .then((data) => {
-        setSingleHike(data);
-      });
-  }
-
   function deleteButton() {
     var inputElement = document.getElementById("deleteIntegerInput");
     var inputValue = inputElement.value;
     deleteMethod(inputValue);
   }
-  const viewAllParks =
-    park &&
+  async function updateMethod(name, hike) {
+    fetch("http://localhost:8081/update/" + name, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        hike: hike
+      })
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        document.getElementById("showUpdateData").innerHTML = JSON.stringify(data);
+      })
+      .catch((err) => console.log("Error:" + err));
+  }
+  async function addMethod(park) {
+    console.log("Call Add", park);
+    fetch("http://localhost:8081/addPark", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(park),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        document.getElementById("showAddData").innerHTML = JSON.stringify(data);
+      })
+      .catch((err) => console.log("Error:" + err));
+  }
+  function addButton() {
+    const park = {
+      id: parseInt(document.getElementById("addIdInput").value),
+      name: document.getElementById("addNameInput").value,
+      location: document.getElementById("addLocationInput").value,
+      type: document.getElementById("addTypeInput").value,
+      image: document.getElementById("addImageInput").value,
+    }
+    addMethod(park);
+  }
+
+  function updateButton() {
+    const parkName = document.getElementById("updateNameInput").value;
+    const hike = {
+      id: parseInt(document.getElementById("updateIdInput").value),
+      title: document.getElementById("updateTitleInput").value,
+      distance: document.getElementById("updateDistanceInput").value,
+      elevation: document.getElementById("updateElevationInput").value,
+      difficulty: document.getElementById("updateDifficultyInput").value,
+      image: document.getElementById("updateImageInput").value,
+      duration: document.getElementById("updateDurationInput").value,
+      location: document.getElementById("updateLocationInput").value,
+      rating: parseFloat(document.getElementById("updateRatingInput").value),
+      park: document.getElementById("updateNameInput").value,
+    }
+    const newId = parseInt(document.getElementById("updateIdInput").value)
+    updateMethod(parkName, hike);
+  }
+  const viewAllParks = park &&
     park.map((el) => (
       <div className="col" key={el.id}>
         <div id="lower" className="card shadow-sm">
@@ -235,7 +215,7 @@ function App() {
               className="btn btn-primary"
               id="return"
               href="#"
-              onClick={() => handleParkView(el.name)}
+              onClick={() => handleParkView(el.id)}
             >
               View {el.name}
             </button>
@@ -244,7 +224,7 @@ function App() {
       </div>
     ));
 
-  const viewAllHikes = hike.map((el) => (
+  const viewAllHikes = hike && hike.map((el) => (
     <div className="col" key={el.id}>
       <div id="lower" className="card shadow-sm">
         <img
@@ -264,7 +244,7 @@ function App() {
           <p className="card-text">Difficulty: {el.difficulty}</p>
           <p className="card-text">Rating: {el.rating}</p>
           <button className="btn btn-primary" onClick={() => viewHike(el)}>
-            View {el.title}
+            View
           </button>
           <button
             className="btn btn-secondary"
@@ -315,6 +295,7 @@ function App() {
       displayMessage(`Error: ${el.title} not found in planner.`);
     } else {
       displayMessage(`${el.title} removed from planner.`);
+      console.log(setWhatParks);
       setPlanner(filteredPlanner);
       const parkHikes = planner.some((hike) => hike.park === el.park);
       if (!parkHikes) {
@@ -406,114 +387,14 @@ function App() {
               {park && park.length > 0 && viewAllParks}
             </div>
           </div>
-        )}{" "}
-        {view === "Grand Tetons National Park" && (
+        )}
+        {view === "Park" && (
           <div>
             <div>
               <div id="con" class="container">
                 <p id="trail">
-                  Below you will find all of the hikes we currently offer for
-                  Grand Tetons National Park. All you need to do is click on the
-                  button of a hike that interests you, and then you'll be
-                  viewing the details of each hike!
-                </p>
-              </div>
-              <div
-                id="column"
-                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
-              >
-                {viewAllHikes}
-              </div>
-            </div>
-          </div>
-        )}{" "}
-        {view === "Zion National Park" && (
-          <div>
-            <div>
-              <div id="con" class="container">
-                <p id="trail">
-                  Below you will find all of the hikes we currently offer for
-                  Zion National Park. All you need to do is click on the button
-                  of a hike that interests you, and then you'll be viewing the
-                  details of each hike!
-                </p>
-              </div>
-              <div
-                id="column"
-                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
-              >
-                {viewAllHikes}
-              </div>
-            </div>
-          </div>
-        )}{" "}
-        {view === "Yosemite National Park" && (
-          <div>
-            <div>
-              <div id="con" class="container">
-                <p id="trail">
-                  Below you will find all of the hikes we currently offer for
-                  Yosemite National Park. All you need to do is click on the
-                  button of a hike that interests you, and then you'll be
-                  viewing the details of each hike!
-                </p>
-              </div>
-              <div
-                id="column"
-                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
-              >
-                {viewAllHikes}
-              </div>
-            </div>
-          </div>
-        )}{" "}
-        {view === "Yellowstone National Park" && (
-          <div>
-            <div>
-              <div id="con" class="container">
-                <p id="trail">
-                  Below you will find all of the hikes we currently offer for
-                  Yellowstone National Park. All you need to do is click on the
-                  button of a hike that interests you, and then you'll be
-                  viewing the details of each hike!
-                </p>
-              </div>
-              <div
-                id="column"
-                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
-              >
-                {viewAllHikes}
-              </div>
-            </div>
-          </div>
-        )}{" "}
-        {view === "Badlands National Park" && (
-          <div>
-            <div>
-              <div id="con" class="container">
-                <p id="trail">
-                  Below you will find all of the hikes we currently offer for
-                  Badlands National Park. All you need to do is click on the
-                  button of a hike that interests you, and then you'll be
-                  viewing the details of each hike!
-                </p>
-              </div>
-              <div
-                id="column"
-                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
-              >
-                {viewAllHikes}
-              </div>
-            </div>
-          </div>
-        )}{" "}
-        {view === "Joshua Tree National Park" && (
-          <div>
-            <div>
-              <div id="con" class="container">
-                <p id="trail">
-                  Below you will find all of the hikes we currently offer for
-                  Joshua Tree National Park. All you need to do is click on the
+                  Below you will find all of the hikes we currently offer for this park.
+                  All you need to do is click on the
                   button of a hike that interests you, and then you'll be
                   viewing the details of each hike!
                 </p>
@@ -576,7 +457,7 @@ function App() {
             </div>
             <button
               className="btn btn-primary"
-              onClick={() => setView(singleHike.park)}
+              onClick={() => setView("Park")}
             >
               Return to {singleHike.park}
             </button>
@@ -718,32 +599,113 @@ function App() {
           </body>
         )}
         {view === "Login" && (
-            <div className="container mt-5">
+          <div className="container mt-5">
             <div id="title">
               <h1>Please Input the admin password.</h1>
             </div>
-            <input id="text1" type="text"></input>
+            <input id="text1" type="text" className="form-control"></input>
             <button class="btn btn-primary" onClick={checkPass} >Login</button>
             <div id="status"></div>
-            </div>
+          </div>
         )}
         {view === "Admin" && (
           <div>
-          <h1 class="py-3">Delete Method</h1>
-          <label htmlFor="deleteIntegerInput">Hike Title: </label>
-          <input
-            id="deleteIntegerInput"
-          />
-          <button class="btn btn-primary" onClick={deleteButton}>
-            Delete
-          </button>
+            <h1 class="py-3">Delete A Park:</h1>
+            <label htmlFor="deleteIntegerInput" className="form-label">Park Title: </label>
+            <input
+              id="deleteIntegerInput" className="form-control"
+            />
+            <button class="btn btn-primary" onClick={deleteButton}>
+              Delete
+            </button>
+            <pre id="showDeleteData"></pre>
+            <h1>Add a Hike/Update Park:</h1>
+            <div>
+              <div>
+                <label htmlFor="updateNameInput" className="form-label">Hike Park: </label>
+                <input id="updateNameInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="updateIdInput" className="form-label">Hike ID: </label>
+                <input type="number" id="updateIdInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="updateTitleInput" className="form-label">Hike Title: </label>
+                <input id="updateTitleInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="updateDistanceInput" className="form-label">Hike Distance: </label>
+                <input id="updateDistanceInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="updateElevationInput" className="form-label">Hike Elevation: </label>
+                <input id="updateElevationInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="updateDifficultyInput" className="form-label">Hike Difficulty: </label>
+                <input id="updateDifficultyInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="updateImageInput" className="form-label">Hike Image Link: </label>
+                <input id="updateImageInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="updateDurationInput" className="form-label">Hike Duration:  </label>
+                <input id="updateDurationInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="updateLocationInput" className="form-label">Hike Coordinates:  </label>
+                <input id="updateLocationInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="updateRatingInput" className="form-label">Hike Rating: </label>
+                <input id="updateRatingInput" className="form-control" />
+              </div>
+              <button class="btn btn-primary" onClick={updateButton}>
+                Update
+              </button>
+            </div>
+            <pre id="showUpdateData">
 
-          <h1>Output:</h1>
-          <pre id="showDeleteData"></pre>
-        </div>
-      )}
+            </pre>
+            <h1 class="py-3">Add Park</h1>
+            <h6>
+              <i>
+                Please note that when adding a new Park, the Id you choose
+                must not already be in use
+              </i>
+            </h6>
+            <div>
+              <div>
+                <label htmlFor="addIdInput" className="form-label">Park ID: </label>
+                <input type="number" id="addIdInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="addNameInput" className="form-label">Park Name: </label>
+                <input id="addNameInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="addImageInput" className="form-label">Park Image Link: </label>
+                <input id="addImageInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="addLocationInput" className="form-label">Park Location:  </label>
+                <input id="addLocationInput" className="form-control" />
+              </div>
+              <div>
+                <label htmlFor="addTypeInput" className="form-label">Park Type: </label>
+                <input id="addTypeInput" className="form-control" />
+              </div>
+              <button class="btn btn-primary" onClick={addButton}>
+                Add
+              </button>
 
+            </div>
+            <pre id="showAddData">
 
+            </pre>
+          </div>
+        )}
 
       </div>
       <footer>
