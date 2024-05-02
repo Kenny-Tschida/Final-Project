@@ -105,7 +105,7 @@ function App() {
   }
   function checkPass() {
     var text1 = document.getElementById("text1").value;
-    if (text1 == "LOL") {
+    if (text1 == "Admin") {
       viewAdminPage();
     } else {
       viewAdminLogin();
@@ -297,14 +297,14 @@ function App() {
       displayMessage(`${el.title} removed from planner.`);
       console.log(setWhatParks);
       setPlanner(filteredPlanner);
-      const parkHikes = planner.some((hike) => hike.park === el.park);
+      const parkHikes = filteredPlanner.some((hike) => hike.park === el.park);
       if (!parkHikes) {
         setWhatParks((prevParks) =>
           prevParks.filter((park) => park !== el.park)
         );
       }
     }
-  };
+  };  
 
   const listPlannerHikes =
     Array.isArray(planner) &&
