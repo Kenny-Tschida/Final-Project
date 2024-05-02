@@ -26,6 +26,7 @@ function App() {
     formState: { errors },
   } = useForm();
   const [dataF, setDataF] = useState({});
+  const [message, setMessage] = useState("");
 
   const updateHooks = () => {
     setPlanner([]);
@@ -282,6 +283,11 @@ function App() {
     </div>
   ));
 
+  const displayMessage = (msg) => {
+    setMessage(msg);
+    setTimeout(() => setMessage(""), 3000); // Clear message after 3 seconds
+  };
+
   const addToPlanner = (el) => {
     const updatedPlanner = Array.isArray(planner) ? planner.slice() : [];
     const isHikeAlreadyAdded = updatedPlanner.some(
@@ -294,8 +300,9 @@ function App() {
       if (!whatParks.includes(el.park)) {
         setWhatParks((prevParks) => [...prevParks, el.park]);
       }
+      displayMessage(`${el.title} added to planner.`);
     } else {
-      console.log("Error: Hike is already in Planner");
+      displayMessage("Error: Hike is already in Planner");
     }
   };
 
@@ -304,10 +311,17 @@ function App() {
     const filteredPlanner = updatedPlanner.filter(
       (plannerHike) => plannerHike.title !== el.title
     );
-    setPlanner(filteredPlanner);
-    const parkHikes = planner.some((hike) => hike.park === el.park);
-    if (!parkHikes) {
-      setWhatParks((prevParks) => prevParks.filter((park) => park !== el.park));
+    if (updatedPlanner.length === filteredPlanner.length) {
+      displayMessage(`Error: ${el.title} not found in planner.`);
+    } else {
+      displayMessage(`${el.title} removed from planner.`);
+      setPlanner(filteredPlanner);
+      const parkHikes = planner.some((hike) => hike.park === el.park);
+      if (!parkHikes) {
+        setWhatParks((prevParks) =>
+          prevParks.filter((park) => park !== el.park)
+        );
+      }
     }
   };
 
@@ -377,6 +391,7 @@ function App() {
         </div>
       </header>
       <div id="bod" class="px-5 py-3">
+        <div id="trail">{message}</div>
         {view === "Home" && (
           <div>
             <div id="con" class="container">
