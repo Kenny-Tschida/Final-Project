@@ -119,7 +119,3 @@ app.listen(port, () => {
 });
 
 
-
-app.listen(port, () => {
-  console.log("App listening at http://%s:%s", host, port);
-});
